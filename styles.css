@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    transition: background 0.3s;
+    position: relative; /* Necessário para posicionamento absoluto do botão */
+}
+body.dark-mode {
+    background-color: black;
+    color: yellow; /* Texto amarelo no modo escuro */
+}
+
+/* Estilizando o card */
+.card {
+    width: 600px;
+    height: 310px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Alterando o card no modo escuro */
+body.dark-mode .card {
+    background-color: #222; /* Fundo do card no modo escuro */
+    color: #007bff; /* Texto do card no modo escuro */
+}
+
+.profile-img {
+    width: 130px;        /* Defina o tamanho da imagem */
+    height: 130px;       /* Defina o tamanho da imagem igual ao da largura */
+    border-radius: 50%;  /* Torna a imagem redonda */
+    object-fit: cover;   /* Garante que a imagem cubra o tamanho da caixa sem distorção */
+    border: 3px solid #007bff; /* Borda opcional (pode mudar a cor) */
+}
+
+.btn-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+}
+
+.btn {
+    background: transparent;
+    color: #007bff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .btn {
+    color: #007bff;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #0056b3;
+}
